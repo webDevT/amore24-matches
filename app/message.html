@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Знакомства в Telegram</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"/>
+<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="">
+
+    
+    
+
+    <!-- ---------------start content------------ -->
+    <div class="content first-message-page">
+        
+             <div class="container">
+                <div class="matches-header">
+                    <div class="profile-top__header">
+                        <div class="back-to-bot-button">
+                        Back to bot
+                        </div>
+                       
+                       
+                      </div>
+
+                      <div class="user-info profile-btn">
+
+                        <div class="photo-profile photo-profile--big">
+                            <img src="img/photo.png" alt="" class="photo-profile__img">
+                        </div>
+            
+                        <div class="user-info__content user-info__content--no-border">
+                            <div class="user-info__content-top">
+                                Anna
+                            </div>
+                            
+                        </div>       
+                       </div>
+
+                     
+                  
+                </div>
+           
+           <div class="message-title">
+            Write first message to the user
+        </div>   
+        
+        <textarea name="message" id="message" cols="30" rows="7"></textarea>
+        
+        <div class="button submit-button" id="submit-button" disabled>
+            Send
+            <img src="img/paper-plane.svg" alt="">
+        </div>
+
+        <!-- <div class="user-info profile-btn">
+
+            <div class="photo-profile photo-profile--big">
+                <img src="img/photo.png" alt="" class="photo-profile__img">
+            </div>
+
+            <div class="user-info__content user-info__content--no-border">
+                <div class="user-info__content-top">
+                    Anna
+                </div>
+                
+            </div>       
+           </div> -->
+        
+        </div>
+        </div>
+
+
+        <!-- start profile page -->
+       
+      
+            <!-- start profile content -->
+          <iframe src="" frameborder="0" class="profile-block"></iframe>
+            <!-- end profile contetn -->
+      
+        
+         
+        <!-- end profile page -->
+      
+    </div>
+    <!-- ---------------end content------------ -->
+
+        <!-- start spinner -->
+<div class="spinner-wrapper">
+    <div class="darksoul-layout">
+        <div class="darksoul-grid">
+            <div class="item1"></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item4"></div>
+        </div>
+      
+    </div>
+</div>
+<!-- end spinner -->
+
+
+    <div class="modal-window">
+        <div class="modal-content">
+            <svg class="modal-img" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0546 1.40409C17.9466 5.44609 4.70564 19.3381 1.11565 34.9131C-5.25335 62.5391 16.4796 89.6501 45.0946 89.7771C65.4976 89.8671 84.3596 74.7911 88.9936 54.6891C90.9076 46.3901 89.9916 39.8011 86.9256 39.8011C84.8986 39.8011 83.0546 43.3221 83.0546 47.1941C83.0546 56.6631 76.3626 69.2021 68.0556 75.3001C47.1416 90.6531 17.5076 81.5261 8.88365 57.0761C5.95565 48.7741 6.62965 36.5321 10.4556 28.5361C14.0846 20.9511 21.1266 13.8631 28.5546 10.3191C37.0436 6.26909 48.4626 5.65509 57.6436 8.75709C64.9606 11.2281 67.3526 10.9181 66.8746 7.56109C66.0036 1.44109 46.3136 -2.14291 33.0546 1.40409ZM80.5436 15.8551C77.7996 18.6651 68.4406 27.7551 59.7456 36.0541L43.9376 51.1451L34.6276 41.8741C25.2466 32.5311 22.0376 30.9341 21.2166 35.1971C20.7416 37.6651 41.6306 58.8011 44.5456 58.8011C45.8526 58.8011 54.3756 50.9911 68.5566 36.7991C87.4276 17.9131 90.3856 14.5491 89.4406 13.0491C87.5306 10.0161 85.6756 10.6011 80.5436 15.8551Z"/>
+                </svg>
+                
+           
+            <div class="modal-title">
+                Message sent! 
+
+            </div>
+            <div class="modal-sub-title">
+                When Anne reply to you, Flirtu will create a private chat room in Telegram!
+            </div>
+
+        <a href="index.html" class="button">Ok</a>
+        </div>
+    </div>
+
+    <script>
+       document.querySelector('.submit-button').addEventListener('click', function() {
+    document.querySelector('.modal-window').style.display = 'block';
+});
+document.addEventListener('click', function(event) {
+    var modal = document.querySelector('.modal-window');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
+
+    const messageInput = document.getElementById('message');
+    const submitButton = document.getElementById('submit-button');
+
+    messageInput.addEventListener('input', function() {
+        if (messageInput.value.trim() !== '') {
+            submitButton.removeAttribute('disabled');
+        } else {
+            submitButton.setAttribute('disabled', true);
+        }
+    });
+
+
+
+    </script>
+     <script
+     src="https://code.jquery.com/jquery-3.7.0.min.js"
+     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+     crossorigin="anonymous"
+   ></script>
+     <script src="js/swiper.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+     <script>
+       $('[data-fancybox="gallery1"]').fancybox({
+         transitionEffect: "fade",
+         transitionDuration: 0,
+       });
+     </script>
+
+     <script>
+     document.querySelector('.profile-btn').addEventListener('click', function() {
+    document.querySelector('.first-message-page').style.display = 'none';
+    document.querySelector('.profile-block').style.display = 'block';
+    document.querySelector('.white-back-button').style.display = 'block';
+});
+
+     </script>
+</html>
